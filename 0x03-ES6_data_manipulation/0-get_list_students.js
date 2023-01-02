@@ -1,20 +1,9 @@
-export default function getListStudents() {
-  const students = [
-    {
-      id: 1,
-      firstName: "Guillaume",
-      location: "San Francisco",
-    },
-    {
-      id: 2,
-      firstName: "James",
-      location: "Columbia",
-    },
-    {
-      id: 5,
-      firstName: "Serena",
-      location: "San Francisco",
+const getListStudentIds = (getList) => {
+    let listData = [];
+    if (!(getList instanceof Array)) {
+      return listData;
     }
-  ];
-  return students;
-}
+    listData = getList.map((results) => results.id);
+    return listData;
+  };
+  export default getListStudentIds;
